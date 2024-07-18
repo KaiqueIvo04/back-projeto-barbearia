@@ -5,17 +5,19 @@
   "main": "app.js",
   "scripts": {
     "test": "node node_modules/jest/bin/jest.js",
+    "open": "cypress open --e2e --browser chrome --config video=false",
     "test:watch": "node node_modules/jest/bin/jest.js --watchAll",
     "test:coverage": "node node_modules/jest/bin/jest.js --coverage",
     "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
-    "url": "github.com/arthurlpaz/projeto-nutes-web"
+    "url": "github.com/Kaiqueivo_04/projeto-nutes-web"
   },
   "author": "Kaique",
   "license": "ISC",
   "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^16.0.2",
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
@@ -27,5 +29,12 @@
     "morgan": "^1.10.0",
     "supertest": "^6.3.3",
     "swagger-ui-express": "^5.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.17.15",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "chai-json-schema": "^1.5.1",
+    "cypress": "^12.9.0",
+    "cypress-plugin-api": "^2.11.2"
   }
 }
