@@ -27,7 +27,7 @@ Then("o sistema deverá registrar o Client e mostrar uma mensagem de sucesso na 
         body: client
     }).then(getDataResponse => {
         expect(getDataResponse.body).to.not.be.empty;
-        cy.log(getDataResponse.body)
+        cy  .log(getDataResponse.body)
     })
     // Cypress.Commands.add('getToken', (email, pass) => {
 
